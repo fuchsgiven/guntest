@@ -1,2 +1,3 @@
 import Gun from "gun"
-export const gun = Gun('https://msdchat.herokuapp.com/gun')
+import 'gun/sea'
+export const gun = Gun('https://msdgunapp.herokuapp.com/gun')

@@ -3,7 +3,6 @@
 	import Login from "./Login.svelte"
 	import Chat from "./Chat.svelte"
 	import { gun } from "./gunInstance.js"
-	import 'gun/sea'
 
 	let username = ''
 
