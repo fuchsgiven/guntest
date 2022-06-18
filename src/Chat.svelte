@@ -1,14 +1,14 @@
 <script>
     import Message from "./Message.svelte";
     import { gun } from "./gunInstance.js";
-    import { debounce } from 'lodash/debounce';
+    import _ from 'lodash';
 
     export let username
     let newMessage
     let bottomEl
     let store = {}
 
-    const scrollToBottom = debounce(() => {
+    const scrollToBottom = _.debounce(() => {
         bottomEl?.scrollIntoView({ behavior: 'auto' })
     }, 300)
 
