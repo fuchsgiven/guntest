@@ -13,7 +13,7 @@
     }, 300)
 
 
-    gun.get("MSD20chat03").map().on(function(data, key) {
+    gun.get("testchatnode01").map().on(function(data, key) {
         if (data) {
             store[key] = data
             scrollToBottom()
@@ -24,7 +24,7 @@
     })
 
     const sendMsg = () => {
-        gun.get("MSD20chat03").set({ text: newMessage, author: username, time: new Date().toLocaleString() })
+        gun.get("testchatnode01").set({ text: newMessage, author: username, time: new Date().toLocaleString() })
         newMessage = ''
         scrollToBottom()
     }

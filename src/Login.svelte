@@ -27,7 +27,7 @@
     <input bind:value={password} name="password" id="password" type="password"/>
 
     <button class="btn" on:click={login}>Log In</button>
-    <button class="btn" on:click={signin}>Sign In</button>
+    <button class="btn" on:click={signin}>Sign Up</button>
 </div>
 
 <style>
