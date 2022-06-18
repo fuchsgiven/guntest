@@ -10,10 +10,10 @@
     const signin = () => {
         user.create(username, password, ({ err }) => {
             if (err) {
-                console.log(err);
-                alert(err);
+                console.log(err)
+                alert(err)
             } else {
-                login();
+                login()
             }
         });
     }

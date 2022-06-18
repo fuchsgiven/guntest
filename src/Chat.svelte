@@ -1,19 +1,18 @@
 <script>
-    import Message from "./Message.svelte";
-    import { gun } from "./gunInstance.js";
-    import _ from 'lodash';
+    import Message from "./Message.svelte"
+    import { gun } from "./gunInstance.js"
+    import _ from 'lodash'
 
     export let username
-    let newMessage
-    let bottomEl
+    let msg_text
+    let bottom_el
     let store = {}
 
     const scrollToBottom = _.debounce(() => {
-        bottomEl?.scrollIntoView({ behavior: 'auto' })
+        bottom_el?.scrollIntoView({ behavior: 'auto' })
     }, 300)
 
-
-    gun.get("msdchatnode01").map().on(function(data, key) {
+    gun.get("testchatnode02").map().on(function(data, key) {
         if (data) {
             store[key] = data
             scrollToBottom()
@@ -24,8 +23,8 @@
     })
 
     const sendMsg = () => {
-        gun.get("msdchatnode01").set({ text: newMessage, author: username, time: new Date().toLocaleString() })
-        newMessage = ''
+        gun.get("testchatnode02").set({ text: msg_text, author: username, time: new Date().toLocaleString() })
+        msg_text = ''
         scrollToBottom()
     }
 
@@ -40,12 +39,12 @@
             {/each}
         </div>
 
-        <div bind:this="{bottomEl}"/>
+        <div bind:this="{bottom_el}"/>
     </div>
 
     <form on:submit|preventDefault={sendMsg}>
-        <input type="text" bind:value={newMessage} maxlength="100" />
-        <button type="submit" disabled={!newMessage}>></button>
+        <input type="text" bind:value={msg_text} maxlength="100" />
+        <button type="submit" disabled={!msg_text}>></button>
     </form>
 </div>
 

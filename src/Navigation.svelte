@@ -4,8 +4,8 @@
 
     const dispatch = createEventDispatcher()
 
-    function logout() {
-        dispatch('logout', {})
+    const logout = () => {
+        dispatch('logout')
     }
 
 </script>

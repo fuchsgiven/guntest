@@ -568,13 +568,13 @@ var app = (function () {
     			attr_dev(img, "class", "user__img svelte-a10umd");
     			if (!src_url_equal(img.src, img_src_value = `https://avatars.dicebear.com/api/initials/${/*username*/ ctx[0]}.svg`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$4, 16, 12, 309);
+    			add_location(img, file$4, 16, 12, 308);
     			attr_dev(p, "class", "user__name svelte-a10umd");
-    			add_location(p, file$4, 17, 12, 420);
+    			add_location(p, file$4, 17, 12, 419);
     			attr_dev(button, "class", "btn svelte-a10umd");
-    			add_location(button, file$4, 18, 12, 470);
+    			add_location(button, file$4, 18, 12, 469);
     			attr_dev(div, "class", "user svelte-a10umd");
-    			add_location(div, file$4, 15, 8, 277);
+    			add_location(div, file$4, 15, 8, 276);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -629,9 +629,9 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			attr_dev(h3, "class", "svelte-a10umd");
-    			add_location(h3, file$4, 13, 4, 228);
+    			add_location(h3, file$4, 13, 4, 227);
     			attr_dev(nav, "class", "svelte-a10umd");
-    			add_location(nav, file$4, 12, 0, 217);
+    			add_location(nav, file$4, 12, 0, 216);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -681,9 +681,9 @@ var app = (function () {
     	let { username } = $$props;
     	const dispatch = createEventDispatcher();
 
-    	function logout() {
-    		dispatch('logout', {});
-    	}
+    	const logout = () => {
+    		dispatch('logout');
+    	};
 
     	const writable_props = ['username'];
 
@@ -782,26 +782,26 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Sign Up";
     			attr_dev(label0, "for", "username");
-    			add_location(label0, file$3, 22, 4, 466);
+    			add_location(label0, file$3, 22, 4, 463);
     			attr_dev(input0, "name", "username");
     			attr_dev(input0, "id", "username");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "svelte-2tna7c");
-    			add_location(input0, file$3, 23, 4, 510);
+    			add_location(input0, file$3, 23, 4, 507);
     			attr_dev(label1, "for", "password");
-    			add_location(label1, file$3, 25, 4, 591);
+    			add_location(label1, file$3, 25, 4, 588);
     			attr_dev(input1, "name", "password");
     			attr_dev(input1, "id", "password");
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "class", "svelte-2tna7c");
-    			add_location(input1, file$3, 26, 4, 635);
+    			add_location(input1, file$3, 26, 4, 632);
     			attr_dev(button0, "class", "btn svelte-2tna7c");
-    			add_location(button0, file$3, 28, 4, 719);
+    			add_location(button0, file$3, 28, 4, 716);
     			attr_dev(button1, "class", "btn svelte-2tna7c");
-    			add_location(button1, file$3, 29, 4, 777);
+    			add_location(button1, file$3, 29, 4, 774);
     			attr_dev(div, "id", "login");
     			attr_dev(div, "class", "svelte-2tna7c");
-    			add_location(div, file$3, 21, 0, 444);
+    			add_location(div, file$3, 21, 0, 441);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20540,7 +20540,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (38:12) {#each messages as [key, message] (key)}
+    // (37:12) {#each messages as [key, message] (key)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let message;
@@ -20593,7 +20593,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(38:12) {#each messages as [key, message] (key)}",
+    		source: "(37:12) {#each messages as [key, message] (key)}",
     		ctx
     	});
 
@@ -20648,21 +20648,21 @@ var app = (function () {
     			button = element("button");
     			t3 = text(">");
     			attr_dev(div0, "class", "container svelte-1ol9ja5");
-    			add_location(div0, file$1, 36, 8, 884);
-    			add_location(div1, file$1, 42, 8, 1059);
+    			add_location(div0, file$1, 35, 8, 875);
+    			add_location(div1, file$1, 41, 8, 1050);
     			attr_dev(div2, "id", "messages");
     			attr_dev(div2, "class", "svelte-1ol9ja5");
-    			add_location(div2, file$1, 35, 4, 855);
+    			add_location(div2, file$1, 34, 4, 846);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "maxlength", "100");
-    			add_location(input, file$1, 46, 8, 1159);
+    			add_location(input, file$1, 45, 8, 1151);
     			attr_dev(button, "type", "submit");
-    			button.disabled = button_disabled_value = !/*newMessage*/ ctx[1];
-    			add_location(button, file$1, 47, 8, 1230);
+    			button.disabled = button_disabled_value = !/*msg_text*/ ctx[1];
+    			add_location(button, file$1, 46, 8, 1220);
     			attr_dev(form, "class", "svelte-1ol9ja5");
-    			add_location(form, file$1, 45, 4, 1108);
+    			add_location(form, file$1, 44, 4, 1100);
     			attr_dev(div3, "id", "chat");
-    			add_location(div3, file$1, 34, 0, 834);
+    			add_location(div3, file$1, 33, 0, 825);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20682,7 +20682,7 @@ var app = (function () {
     			append_dev(div3, t1);
     			append_dev(div3, form);
     			append_dev(form, input);
-    			set_input_value(input, /*newMessage*/ ctx[1]);
+    			set_input_value(input, /*msg_text*/ ctx[1]);
     			append_dev(form, t2);
     			append_dev(form, button);
     			append_dev(button, t3);
@@ -20707,11 +20707,11 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (dirty & /*newMessage*/ 2 && input.value !== /*newMessage*/ ctx[1]) {
-    				set_input_value(input, /*newMessage*/ ctx[1]);
+    			if (dirty & /*msg_text*/ 2 && input.value !== /*msg_text*/ ctx[1]) {
+    				set_input_value(input, /*msg_text*/ ctx[1]);
     			}
 
-    			if (!current || dirty & /*newMessage*/ 2 && button_disabled_value !== (button_disabled_value = !/*newMessage*/ ctx[1])) {
+    			if (!current || dirty & /*msg_text*/ 2 && button_disabled_value !== (button_disabled_value = !/*msg_text*/ ctx[1])) {
     				prop_dev(button, "disabled", button_disabled_value);
     			}
     		},
@@ -20760,18 +20760,18 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Chat', slots, []);
     	let { username } = $$props;
-    	let newMessage;
-    	let bottomEl;
+    	let msg_text;
+    	let bottom_el;
     	let store = {};
 
     	const scrollToBottom = lodash.debounce(
     		() => {
-    			bottomEl?.scrollIntoView({ behavior: 'auto' });
+    			bottom_el?.scrollIntoView({ behavior: 'auto' });
     		},
     		300
     	);
 
-    	gun.get("testchatnode01").map().on(function (data, key) {
+    	gun.get("testchatnode02").map().on(function (data, key) {
     		if (data) {
     			$$invalidate(5, store[key] = data, store);
     			scrollToBottom();
@@ -20782,13 +20782,13 @@ var app = (function () {
     	});
 
     	const sendMsg = () => {
-    		gun.get("testchatnode01").set({
-    			text: newMessage,
+    		gun.get("testchatnode02").set({
+    			text: msg_text,
     			author: username,
     			time: new Date().toLocaleString()
     		});
 
-    		$$invalidate(1, newMessage = '');
+    		$$invalidate(1, msg_text = '');
     		scrollToBottom();
     	};
 
@@ -20800,14 +20800,14 @@ var app = (function () {
 
     	function div1_binding($$value) {
     		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			bottomEl = $$value;
-    			$$invalidate(2, bottomEl);
+    			bottom_el = $$value;
+    			$$invalidate(2, bottom_el);
     		});
     	}
 
     	function input_input_handler() {
-    		newMessage = this.value;
-    		$$invalidate(1, newMessage);
+    		msg_text = this.value;
+    		$$invalidate(1, msg_text);
     	}
 
     	$$self.$$set = $$props => {
@@ -20819,8 +20819,8 @@ var app = (function () {
     		gun,
     		_: lodash,
     		username,
-    		newMessage,
-    		bottomEl,
+    		msg_text,
+    		bottom_el,
     		store,
     		scrollToBottom,
     		sendMsg,
@@ -20829,8 +20829,8 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('username' in $$props) $$invalidate(0, username = $$props.username);
-    		if ('newMessage' in $$props) $$invalidate(1, newMessage = $$props.newMessage);
-    		if ('bottomEl' in $$props) $$invalidate(2, bottomEl = $$props.bottomEl);
+    		if ('msg_text' in $$props) $$invalidate(1, msg_text = $$props.msg_text);
+    		if ('bottom_el' in $$props) $$invalidate(2, bottom_el = $$props.bottom_el);
     		if ('store' in $$props) $$invalidate(5, store = $$props.store);
     		if ('messages' in $$props) $$invalidate(3, messages = $$props.messages);
     	};
@@ -20847,8 +20847,8 @@ var app = (function () {
 
     	return [
     		username,
-    		newMessage,
-    		bottomEl,
+    		msg_text,
+    		bottom_el,
     		messages,
     		sendMsg,
     		store,
@@ -22495,9 +22495,9 @@ var app = (function () {
     			t = space();
     			main = element("main");
     			if_block.c();
-    			add_location(main, file, 28, 1, 568);
+    			add_location(main, file, 28, 1, 551);
     			attr_dev(div, "id", "app");
-    			add_location(div, file, 26, 0, 505);
+    			add_location(div, file, 26, 0, 488);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22576,14 +22576,14 @@ var app = (function () {
     	const user = gun.user().recall({ sessionStorage: true });
     	user.get('alias').on(value => $$invalidate(0, username = value));
 
-    	gun.on('auth', async event => {
+    	gun.on('auth', async () => {
     		const alias = await user.get('alias');
     		$$invalidate(0, username = alias);
     	});
 
     	const logout = () => {
     		user.leave();
-    		location.reload();
+    		$$invalidate(0, username = "");
     	};
 
     	const writable_props = [];

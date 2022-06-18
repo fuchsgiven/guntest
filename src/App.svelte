@@ -1,24 +1,24 @@
 <script>
-	import Navigation from "./Navigation.svelte";
-	import Login from "./Login.svelte";
-	import Chat from "./Chat.svelte";
-	import { gun } from "./gunInstance.js";
-	import 'gun/sea';
+	import Navigation from "./Navigation.svelte"
+	import Login from "./Login.svelte"
+	import Chat from "./Chat.svelte"
+	import { gun } from "./gunInstance.js"
+	import 'gun/sea'
 
 	let username = ''
 
-	const user = gun.user().recall({sessionStorage: true});
+	const user = gun.user().recall({sessionStorage: true})
 
-	user.get('alias').on(value => username = value);
+	user.get('alias').on(value => username = value)
 
-	gun.on('auth', async (event) => {
-		const alias = await user.get('alias');
+	gun.on('auth', async () => {
+		const alias = await user.get('alias')
 		username = alias
 	})
 
 	const logout = () => {
 		user.leave()
-		location.reload()
+		username = ""
 	}
 
 	$: username
