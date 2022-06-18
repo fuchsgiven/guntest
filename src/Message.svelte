@@ -9,7 +9,7 @@
     <div class="message">
         <img class="message-img" src={`https://avatars.dicebear.com/api/initials/${message.author}.svg`} alt=""/>
         <p class="message-author">{message.author}</p>
-        <p class="message-time">{message.time}</p>
+        <p class="message-time">{new Date(message.time).toLocaleString()}</p>
     </div>
     <p>{message.text}</p>
 </div>

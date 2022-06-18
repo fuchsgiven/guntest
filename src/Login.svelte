@@ -7,7 +7,7 @@
         user.auth(username, password, ({ err }) => err && alert(err))
     }
 
-    const signin = () => {
+    const signup = () => {
         user.create(username, password, ({ err }) => {
             if (err) {
                 console.log(err)
@@ -27,7 +27,7 @@
     <input bind:value={password} name="password" id="password" type="password"/>
 
     <button class="btn" on:click={login}>Log In</button>
-    <button class="btn" on:click={signin}>Sign Up</button>
+    <button class="btn" on:click={signup}>Sign Up</button>
 </div>
 
 <style>

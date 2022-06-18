@@ -12,7 +12,7 @@
         bottom_el?.scrollIntoView({ behavior: 'auto' })
     }, 300)
 
-    gun.get("testchatnode02").map().on(function(data, key) {
+    gun.get("testchatnodeid").map().on(function(data, key) {
         if (data) {
             store[key] = data
             scrollToBottom()
@@ -23,7 +23,7 @@
     })
 
     const sendMsg = () => {
-        gun.get("testchatnode02").set({ text: msg_text, author: username, time: new Date().toLocaleString() })
+        gun.get("testchatnodeid").set({ text: msg_text, author: username, time: new Date().getTime() })
         msg_text = ''
         scrollToBottom()
     }
