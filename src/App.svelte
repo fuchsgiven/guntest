@@ -5,23 +5,23 @@
 	import { gun } from "./gunInstance.js";
 	import 'gun/sea';
 
+	let username = ''
+
 	const user = gun.user().recall({sessionStorage: true});
 
-	let uname = ''
-
-	user.get('alias').on(value => uname = value);
+	user.get('alias').on(value => username = value);
 
 	gun.on('auth', async (event) => {
 		const alias = await user.get('alias');
-		uname = alias
+		username = alias
 	})
 
-	function logout() {
+	const logout = () => {
 		user.leave()
 		location.reload()
 	}
 
-	$: username = uname
+	$: username
 </script>
 
 <div id="app">

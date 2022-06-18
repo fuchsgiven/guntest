@@ -1,17 +1,17 @@
 <script>
     import Message from "./Message.svelte";
     import { gun } from "./gunInstance.js";
+    import { debounce } from 'lodash/debounce';
 
     export let username
     let newMessage
     let bottomEl
     let store = {}
 
-    const scrollToBottom = () => {
-        let timer;
-        clearTimeout(timer);
-        timer = setTimeout(() => bottomEl?.scrollIntoView({ behavior: 'auto' }), 300);
-    }
+    const scrollToBottom = debounce(() => {
+        bottomEl?.scrollIntoView({ behavior: 'auto' })
+    }, 300)
+
 
     gun.get("MSD20chat03").map().on(function(data, key) {
         if (data) {
@@ -22,8 +22,6 @@
             store = store
         }
     })
-
-    //const messages = gun.get("MSD20chat03").map()
 
     const sendMsg = () => {
         gun.get("MSD20chat03").set({ text: newMessage, author: username, time: new Date().toLocaleString() })
